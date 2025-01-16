@@ -31,5 +31,8 @@ jobs:
             -----END OPENSSH PRIVATE KEY-----
           ssh-server-host: gitlab.com
 
+      - name: Known Hosts
+        run: cat ~/.ssh/known_hosts
+
       - name: Tanjun
         run: tanjun --version
