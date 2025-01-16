@@ -30,9 +30,16 @@ jobs:
             APHfqqtDTSOy9qNOurw/AAAAEnNoeWltQGRlb3h5cy5sb2NhbAECAw==
             -----END OPENSSH PRIVATE KEY-----
           ssh-server-host: gitlab.com
+          tools: 1password
 
       - name: Known Hosts
         run: cat ~/.ssh/known_hosts
 
+      - name: List Keys
+        run: ssh-add -l
+
       - name: Tanjun
         run: tanjun --version
+      
+      - name: OP CLI
+        run: op --version
