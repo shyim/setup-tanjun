@@ -19,6 +19,16 @@ jobs:
 
       - name: Install Tanjun
         uses: ./.
+        with:
+          # This is a random private key to test ssh-agent
+          ssh-private-key: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+            QyNTUxOQAAACDcwQyDkEB0KXPbDrJ5iWRCRgDx36qrQ00jsvajTrq8PwAAAJh/TZH7f02R
+            +wAAAAtzc2gtZWQyNTUxOQAAACDcwQyDkEB0KXPbDrJ5iWRCRgDx36qrQ00jsvajTrq8Pw
+            AAAECS873hWZC87Oo6Gljs/v2IUt2SAmfxGGMm64sIM7iLwtzBDIOQQHQpc9sOsnmJZEJG
+            APHfqqtDTSOy9qNOurw/AAAAEnNoeWltQGRlb3h5cy5sb2NhbAECAw==
+            -----END OPENSSH PRIVATE KEY-----
       
       - name: Tanjun
         run: tanjun --version

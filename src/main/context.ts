@@ -6,4 +6,5 @@ export const osArch: string = arch();
 
 export const inputs = {
   version: getInput('version') || 'latest',
+  sshPrivateKey: getInput('ssh-private-key'),
 };
