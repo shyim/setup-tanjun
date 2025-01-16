@@ -2,7 +2,7 @@ import { addPath, setFailed } from "@actions/core";
 import { inputs } from './context';
 import { install } from "./installer";
 import { dirname } from 'path';
-import { configureSSHAgent } from "./agent";
+import { configureSSHAgent, configureSSHHosts } from "./ssh";
 
 async function run() {
     try {
@@ -13,6 +13,10 @@ async function run() {
 
         if (inputs.sshPrivateKey) {
             await configureSSHAgent(inputs.sshPrivateKey);
+        }
+
+        if (inputs.sshServerHost) {
+            await configureSSHHosts(inputs.sshServerHost);
         }
     } catch (error) {
         if (error instanceof Error) {

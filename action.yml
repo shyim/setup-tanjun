@@ -14,6 +14,10 @@ inputs:
     description: 'SSH Private Key'
     default: ''
     required: false
+  ssh-server-host:
+    description: 'Host to scan to add to known_hosts'
+    default: ''
+    required: false
   token:
     description: "GitHub Token used to authenticate against a repository for Git context"
     default: ${{ github.token }}

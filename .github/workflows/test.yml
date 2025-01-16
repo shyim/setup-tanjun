@@ -29,6 +29,7 @@ jobs:
             AAAECS873hWZC87Oo6Gljs/v2IUt2SAmfxGGMm64sIM7iLwtzBDIOQQHQpc9sOsnmJZEJG
             APHfqqtDTSOy9qNOurw/AAAAEnNoeWltQGRlb3h5cy5sb2NhbAECAw==
             -----END OPENSSH PRIVATE KEY-----
-      
+          ssh-server-host: gitlab.com
+
       - name: Tanjun
         run: tanjun --version
