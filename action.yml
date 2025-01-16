@@ -1,0 +1,21 @@
+name: 'Setup Tanjun'
+description: 'Installs Tanjun'
+author: 'shyim'
+branding:
+  color: 'green'
+  icon: 'package'
+
+inputs:
+  version:
+    description: 'Tanjun Version'
+    default: 'latest'
+    required: false
+  token:
+    description: "GitHub Token used to authenticate against a repository for Git context"
+    default: ${{ github.token }}
+    required: false
+
+runs:
+  using: 'node20'
+  main: 'dist/main/main.js'
+  post: 'dist/post/main.js'
